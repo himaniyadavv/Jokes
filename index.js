@@ -60,24 +60,9 @@ let jokes = [
 
 
 
-
-let result;
-
-
-
-const randomNumber = Math.floor(Math.random() * jokes.length - 1);
-
-
-function click() {
-
-    for (let i = 0; i < jokes.length; i++) {
-        if (randomNumber === i) {
-            result = jokes[i]
-            let show = document.getElementById("para").innerHTML = result
-        }
-
-
-    }
-    return show;
+function myClick() {
+    const randomNumber = Math.floor(Math.random() * (jokes.length - 1));
+    document.getElementById("para").innerHTML=jokes[randomNumber]
 }
-document.write(click())
+
+document.getElementByClassName("btn").addEventListner('click',myClick())
